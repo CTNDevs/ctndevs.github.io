@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Page not found. Return to the main page of CTN Devs.">
+  <meta name="theme-color" content="#0F172A">
+  <meta property="og:title" content="404 - Page not found | CTN Devs">
+  <meta property="og:description"
+    content="Beautiful games made by an independent solo developer for quiet moments and curious minds.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ctndevs.github.io/images/icons.png">
+  <meta property="og:url" content="https://ctndevs.github.io/404.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="404 - Page not found | CTN Devs">
+  <meta name="twitter:description"
+    content="Beautiful games made by an independent solo developer for quiet moments and curious minds.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://ctndevs.github.io/404.html">
+  <link rel="icon" href="images/file_icon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>404 - Page not found | CTN Devs</title>
+  <style>
+    .error-section {
+      min-height: calc(100vh - var(--header));
+      display: flex;
+      align-items: center
+    }
+
+    .error-grid {
+      display: grid;
+      gap: 40px;
+      align-items: center;
+      grid-template-columns: .9fr 1.1fr
+    }
+
+    .error-code {
+      font-size: clamp(6rem, 16vw, 11rem);
+      font-weight: 800;
+      letter-spacing: -.05em;
+      line-height: .9;
+      color: var(--accent);
+      margin: 0
+    }
+
+    .error-copy h1 {
+      font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+      max-width: none;
+      margin-bottom: 14px
+    }
+
+    .error-art {
+      display: grid;
+      place-items: center
+    }
+
+    .error-art svg {
+      width: 100%;
+      max-width: 360px;
+      height: auto
+    }
+
+    @media (max-width: 760px) {
+      .error-grid {
+        grid-template-columns: 1fr;
+        text-align: center
+      }
+
+      .error-art {
+        order: -1
+      }
+
+      .error-copy .button-row {
+        justify-content: center
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html#home" aria-label="CTN Devs home"><span>CTN Devs</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links"
+        aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div class="nav-actions" id="nav-links">
+        <a class="nav-link" href="index.html#home">Home</a><a class="nav-link" href="index.html#games">Games</a><a class="nav-link"
+          href="index.html#about">About</a><a class="nav-link" href="index.html#features">Approach</a><a class="nav-link"
+          href="index.html#privacy">Privacy</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch theme"><svg
+            aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="M12 3v2m0 14v2M3 12h2m14 0h2m-2.64-6.36-1.42 1.42M7.05 16.95l-1.42 1.42m0-12.74 1.42 1.42m9.9 9.9 1.42 1.42M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" />
+          </svg></button>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="error-section section" id="not-found">
+      <div class="container error-grid">
+        <div class="error-copy reveal">
+          <p class="eyebrow">Error 404</p>
+          <p class="error-code" aria-hidden="true">404</p>
+          <h1>It seems this page has gone missing</h1>
+          <p class="lead">I'm sorry, but the page you're looking for doesn't exist, has been moved, or is no longer available. Let me help you find what you're looking for.</p>
+          <div class="button-row">
+            <a class="button" href="index.html#home">Return to Home <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="index.html#games">View Games</a>
+          </div>
+        </div>
+        <div class="error-art reveal" aria-hidden="true">
+          <svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="180" cy="150" r="120" fill="var(--surface-2)" />
+            <circle cx="180" cy="150" r="120" fill="none" stroke="var(--border)" stroke-width="2" />
+            <g stroke="var(--accent)" stroke-width="10" stroke-linecap="round" fill="none">
+              <path d="M120 100 A85 85 0 0 1 240 100" opacity=".18" />
+              <path d="M240 200 A85 85 0 0 1 120 200" opacity=".35" />
+            </g>
+            <g>
+              <circle cx="140" cy="150" r="14" fill="var(--surface)" stroke="var(--border)" stroke-width="2" />
+              <circle cx="140" cy="150" r="5" fill="var(--muted)" />
+              <circle cx="220" cy="150" r="14" fill="var(--surface)" stroke="var(--border)" stroke-width="2" />
+              <circle cx="220" cy="150" r="5" fill="var(--muted)" />
+              <path d="M150 195 Q180 175 210 195" stroke="var(--muted)" stroke-width="6" fill="none"
+                stroke-linecap="round" />
+            </g>
+            <g fill="var(--surface)" stroke="var(--border)" stroke-width="2">
+              <rect x="70" y="60" width="46" height="46" rx="10" transform="rotate(-12 93 83)" />
+              <rect x="248" y="196" width="40" height="40" rx="9" transform="rotate(10 268 216)" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand" href="index.html#home"><span>CTN Devs</span></a>
+        <p>Relaxing games for brighter breaks.</p>
+      </div>
+      <div class="footer-links"><a href="index.html#home">Home</a><a href="index.html#games">Games</a><a href="index.html#about">About</a><a
+          href="index.html#features">Approach</a><a href="index.html#privacy">Privacy</a></div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> CTN Devs. All rights reserved.</div>
+  </footer>
+  <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -385,6 +385,30 @@ h3 {
     transform: translateY(-2px)
 }
 
+.button2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 18px;
+    background: #FACC15;
+    color: #06230f;
+    border-radius: 12px;
+    font-size: .92rem;
+    font-weight: 800;
+    transition: transform .2s, background .2s;
+}
+
+.button2:hover {
+    background: rgba(199, 216, 50, 0.733);
+    transform: translateY(-2px);
+}
+
+.button2 img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
 .button-secondary {
     color: var(--text);
     background: transparent;
@@ -403,6 +427,10 @@ h3 {
 
 .text-link:hover {
     color: #4ade80
+}
+
+.text-link.text-link-lg {
+    font-size: 1.1rem
 }
 
 .disabled {
@@ -466,8 +494,9 @@ h3 {
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: contain;
-    padding: 28px;
-    background: var(--surface-2)
+    padding: 0%;
+    background: var(--surface-2);
+    border-radius: 18px
 }
 
 .coming-soon > img {
