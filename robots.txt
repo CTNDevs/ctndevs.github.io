@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ctndevs.github.io/sitemap.xml
+Sitemap: https://ctndevs.com/sitemap.xml

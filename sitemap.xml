@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ctndevs.github.io/</loc></url>
-  <url><loc>https://ctndevs.github.io/puzzleme/</loc></url>
+  <url><loc>https://ctndevs.com/</loc></url>
+  <url><loc>https://ctndevs.com/puzzleme/</loc></url>
+  <url><loc>https://ctndevs.com/puzzleme/privacy.html</loc></url>
+  <url><loc>https://ctndevs.com/puzzleme/terms.html</loc></url>
 </urlset>
