@@ -5,46 +5,76 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PuzzleMe - Jigsaw Puzzle | CTN Devs</title>
-  <meta name="description"
-    content="Relax, focus, and enjoy beautiful jigsaw puzzles with thousands of images, multiple difficulty levels, and custom puzzles made from your own photos.">
+  <meta name="description" content="Relax, focus, and enjoy beautiful jigsaw puzzles with thousands of images, multiple difficulty levels, and custom puzzles made from your own photos.">
   <meta name="theme-color" content="#0F172A">
-  <meta property="og:title" content="PuzzleMe - Jigsaw Puzzle">
-  <meta property="og:description"
-    content="A relaxing jigsaw puzzle game with thousands of beautiful puzzles and custom photo puzzles.">
+  <link rel="canonical" href="https://ctndevs.com/puzzleme/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://ctndevs.com/images/icons.png">
+  <meta property="og:site_name" content="CTN Devs">
+  <meta property="og:title" content="PuzzleMe - Jigsaw Puzzle | CTN Devs">
+  <meta property="og:description" content="Relax, focus, and enjoy beautiful jigsaw puzzles with thousands of images, multiple difficulty levels, and custom puzzles made from your own photos.">
+  <meta property="og:image" content="https://ctndevs.com/puzzleme/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://ctndevs.com/puzzleme/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PuzzleMe - Jigsaw Puzzle">
-  <meta name="twitter:description" content="Relaxing jigsaw puzzles with beautiful images and custom photo puzzles.">
-  <link rel="canonical" href="https://ctndevs.com/puzzleme/">
-  <link rel="icon" href="../images/file_icon.ico" type="image/x-icon">
+  <link rel="icon" href="../images/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
-  <style>
-    /* More compact vertical rhythm for the game detail page. */
-    .section { padding: clamp(60px, 8vw, 90px) 0; }
-  </style>
+  <script>
+    document.documentElement.classList.add('js');
+    try { const theme = localStorage.getItem('ctn-theme'); if (theme) document.documentElement.dataset.theme = theme; } catch (e) { }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "PuzzleMe - Jigsaw Puzzle",
+    "operatingSystem": "ANDROID",
+    "applicationCategory": "GameApplication",
+    "url": "https://ctndevs.com/puzzleme/",
+    "image": "https://ctndevs.com/puzzleme/images/icon.webp",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.ctndevs.puzzleme",
+    "author": {
+      "@type": "Organization",
+      "name": "CTN Devs",
+      "url": "https://ctndevs.com/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "ratingCount": 9
+    }
+  }
+  </script>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="../index.html">
-        <img src="../images/file_icon.ico" alt="" width="34" height="34">
+      <a class="brand" href="../" aria-label="CTN Devs home">
+        <img src="../images/logo.webp" alt="" width="34" height="34">
         <span>CTN Devs</span>
       </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
       <div class="nav-actions" id="nav-links">
-        <a class="nav-link" href="../index.html">Home</a>
-        <a class="nav-link" href="../index.html#games">Games</a>
+        <a class="nav-link" href="../">Home</a>
+        <a class="nav-link" href="../#games">Games</a>
+        <a class="nav-link" href="../#about">About</a>
+        <a class="nav-link" href="../#features">Approach</a>
+        <a class="nav-link" href="../#privacy">Privacy</a>
         <button class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
           <svg aria-hidden="true" viewBox="0 0 24 24">
             <path
@@ -57,205 +87,103 @@
   <main id="main">
     <section class="hero section" id="home">
       <div class="container hero-grid">
+        <p class="eyebrow reveal">CTN Devs presents</p>
         <div class="hero-copy reveal">
-          <p class="eyebrow">CTN Devs presents</p>
           <h1>PuzzleMe - Jigsaw Puzzle</h1>
-          <p class="lead">
-            Relax, focus, and enjoy thousands of beautiful jigsaw puzzles.
-            Choose from multiple difficulty levels, solve stunning images,
-            or create your own puzzles from personal photos.
-          </p>
+          <p class="lead">Relax, focus, and enjoy thousands of beautiful jigsaw puzzles. Pick your difficulty, solve
+            stunning images, or create your own puzzles from personal photos.</p>
           <div class="button-row">
-            <a class="button" href="https://play.google.com/store/apps/details?id=com.ctndevs.puzzleme" target="_blank"
-              rel="noopener noreferrer">
-              Get it on Google Play
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a class="button button-secondary" href="#screenshots">
-              View screenshots
-              <span aria-hidden="true">↓</span>
-            </a>
-            <a class="button2" href="https://www.tiktok.com/@puzzleme.jigsawpuzzle" target="_blank"
-              rel="noopener noreferrer">
-              <!-- <img src="../images/tiktok.png" alt=""> -->
-              Follow on TikTok
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a class="button2" href="https://www.youtube.com/@puzzleme.jigsawpuzzle" target="_blank"
-              rel="noopener noreferrer">
-              <!-- <img src="../images/youtube.png" alt=""> -->
-              Follow on Youtube
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a class="button2" href="https://www.facebook.com/puzzlemejigsawpuzzle" target="_blank"
-              rel="noopener noreferrer">
-              <!-- <img src="../images/facebook.png" alt=""> -->
-              Follow on Facebook
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a class="button2" href="https://www.instagram.com/puzzleme.jigsawpuzzle/" target="_blank"
-              rel="noopener noreferrer">
-              <!-- <img src="../images/instagram.png" alt=""> -->
-              Follow on Instagram
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a class="button2" href="https://www.threads.com/@puzzleme.jigsawpuzzle" target="_blank"
-              rel="noopener noreferrer">
-              <!-- <img src="../images/threads.png" alt=""> -->
-              Follow on Threads
-              <span aria-hidden="true">↗</span>
-            </a>
+            <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.ctndevs.puzzleme" target="_blank" rel="noopener noreferrer"><img src="../images/google-play-badge.webp" alt="Get it on Google Play" width="646" height="250"></a>
+            <a class="button button-secondary" href="#screenshots">View screenshots <span aria-hidden="true">↓</span></a>
+          </div>
+          <p class="app-stats">
+            <span><strong>5.0</strong> <span class="stars" aria-hidden="true">★</span> on Google Play</span>
+            <span><strong>100+</strong> downloads</span>
+          </p>
+          <div class="button-row social-row" aria-label="Follow PuzzleMe">
+            <a class="button button-social" href="https://www.tiktok.com/@puzzleme.jigsawpuzzle" target="_blank" rel="noopener noreferrer">TikTok <span aria-hidden="true">↗</span></a>
+            <a class="button button-social" href="https://www.youtube.com/@puzzleme.jigsawpuzzle" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a>
+            <a class="button button-social" href="https://www.facebook.com/puzzlemejigsawpuzzle" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a>
+            <a class="button button-social" href="https://www.instagram.com/puzzleme.jigsawpuzzle/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+            <a class="button button-social" href="https://www.threads.com/@puzzleme.jigsawpuzzle" target="_blank" rel="noopener noreferrer">Threads <span aria-hidden="true">↗</span></a>
           </div>
         </div>
         <div class="hero-art reveal">
-          <img class="game-icon"
-            src="https://play-lh.googleusercontent.com/DIBIxK4flY91xCuXE2og0EDGCCZgvBd-rq4jo4HJa-wjTvEliVmGVpljDdLcpbyZLph0RAoGJC1FTi3NEDyk"
-            alt="PuzzleMe - Jigsaw Puzzle app icon" width="512" height="512">
+          <img src="images/icon.webp" alt="PuzzleMe app icon" width="512" height="512" fetchpriority="high">
         </div>
       </div>
-      <a class="scroll-cue" href="#about" aria-label="Scroll to next section">
-        <span></span>
-        Scroll to explore
-      </a>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to next section"><span></span> Scroll to explore</a>
     </section>
     <section class="section section-muted" id="about">
       <div class="container split-layout">
+        <p class="eyebrow reveal">About PuzzleMe</p>
+        <h2 class="reveal">A relaxing puzzle experience for everyone</h2>
         <div class="reveal">
-          <p class="eyebrow">About PuzzleMe - Jigsaw Puzzle</p>
-          <h2>A relaxing puzzle experience for everyone</h2>
-        </div>
-        <div class="reveal">
-          <p class="lead">
-            PuzzleMe - Jigsaw Puzzle combines beautiful artwork, smooth gameplay, and relaxing
-            music to create a jigsaw puzzle experience you can enjoy anytime.
-            Whether you have a few minutes or a few hours, there's always a
-            puzzle waiting for you.
-          </p>
-          <p>
-            Explore thousands of carefully selected images across dozens of
-            categories, choose from eight difficulty levels ranging from
-            beginner-friendly 3×3 puzzles to challenging 16×16 grids, or create
-            your own custom puzzles from photos stored on your device.
-          </p>
-          <p>
-            Every puzzle is designed to be satisfying to solve, with helpful
-            tools like hints, edge-piece filtering, full image preview, automatic
-            saving, and customizable backgrounds to make every session enjoyable.
-          </p>
+          <p class="lead">PuzzleMe combines beautiful artwork, smooth gameplay, and relaxing music into a jigsaw
+            experience you can enjoy anytime. Whether you have a few minutes or a few hours, there's always a puzzle
+            waiting for you.</p>
+          <p>Explore thousands of carefully selected images across dozens of categories, choose from eight difficulty
+            levels, or create your own puzzles from photos stored on your device.</p>
+          <p>I built it to be satisfying from the first piece to the last, with helpful tools, automatic saving, and
+            customizable backgrounds to make every session enjoyable.</p>
         </div>
       </div>
     </section>
     <section class="section" id="features">
       <div class="container">
         <div class="section-heading split-layout">
+          <p class="eyebrow reveal">Everything you need</p>
+          <h2 class="reveal">Designed for a relaxing experience</h2>
           <div class="reveal">
-            <p class="eyebrow">Everything you need</p>
-            <h2>Designed for a relaxing experience</h2>
-          </div>
-          <div class="reveal">
-            <p class="lead">
-              Every detail in PuzzleMe - Jigsaw Puzzle is thoughtfully designed to deliver a relaxing, intuitive, and
-              enjoyable experience. From smooth interactions to carefully crafted features, everything works together to
-              make every puzzle satisfying from the first piece to the last.
-            </p>
+            <p class="lead">I designed every detail of PuzzleMe to feel relaxing and intuitive, from satisfying piece
+              snapping to the tools that help when you get stuck.</p>
           </div>
         </div>
         <div class="features-grid">
           <article class="feature reveal">
-            <span class="feature-icon">🧩</span>
+            <span class="feature-icon" aria-hidden="true">🧩</span>
             <h3>Thousands of Puzzles</h3>
-            <p>
-              Discover beautiful images across animals, nature, cities, fantasy,
-              food, space, landmarks, flowers, vehicles, and many more categories.
-            </p>
+            <p>Beautiful images across dozens of categories: animals, nature, cities, fantasy, space, food, and more.</p>
           </article>
           <article class="feature reveal">
-            <span class="feature-icon">🎯</span>
+            <span class="feature-icon" aria-hidden="true">🎯</span>
             <h3>8 Difficulty Levels</h3>
-            <p>
-              Choose between 3×3, 4×4, 6×6, 8×8, 10×10, 12×12, 14×14 and 16×16
-              depending on how challenging you want your puzzle to be.
-            </p>
+            <p>From a quick 3×3 warm-up all the way to a 16×16 challenge.</p>
           </article>
           <article class="feature reveal">
-            <span class="feature-icon">📷</span>
-            <h3>Create Your Own</h3>
-            <p>
-              Turn your favorite photos into unique jigsaw puzzles directly from
-              your gallery.
-            </p>
+            <span class="feature-icon" aria-hidden="true">📷</span>
+            <h3>Your Own Photos</h3>
+            <p>Turn any photo from your gallery into a jigsaw puzzle.</p>
           </article>
           <article class="feature reveal">
-            <span class="feature-icon">💡</span>
+            <span class="feature-icon" aria-hidden="true">📅</span>
+            <h3>Daily Puzzles</h3>
+            <p>A fresh puzzle every day to keep your routine relaxing.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-icon" aria-hidden="true">💡</span>
             <h3>Helpful Tools</h3>
-            <p>
-              Use hints, edge-piece filtering, full image preview, and automatic
-              cleanup whenever you need a little help.
-            </p>
+            <p>Hints, edge-piece filter, full image preview, and automatic cleanup whenever you need a hand.</p>
           </article>
           <article class="feature reveal">
-            <span class="feature-icon">✨</span>
-            <h3>Smooth Gameplay</h3>
-            <p>
-              Enjoy satisfying piece snapping, vibration feedback, intuitive
-              controls, and customizable puzzle backgrounds.
-            </p>
+            <span class="feature-icon" aria-hidden="true">💾</span>
+            <h3>Never Lose Progress</h3>
+            <p>Automatic saving on your device, plus optional cloud save with Google Play Games.</p>
           </article>
           <article class="feature reveal">
-            <span class="feature-icon">💾</span>
-            <h3>Automatic Saving</h3>
-            <p>
-              Leave anytime and continue exactly where you stopped without losing
-              your progress.
-            </p>
-          </article>
-          <article class="feature reveal">
-            <span class="feature-icon">📊</span>
+            <span class="feature-icon" aria-hidden="true">📊</span>
             <h3>Player Statistics</h3>
-            <p>
-              Track completed puzzles, total play time, rewards collected, and
-              your personal progress.
-            </p>
+            <p>Track completed puzzles, total play time, and rewards collected.</p>
           </article>
           <article class="feature reveal">
-            <span class="feature-icon">🌍</span>
-            <h3>Multiple Languages</h3>
-            <p>
-              Play comfortably in your preferred language with support for players
-              around the world.
-            </p>
-          </article>
-          <article class="feature reveal">
-            <span class="feature-icon">📶</span>
+            <span class="feature-icon" aria-hidden="true">📶</span>
             <h3>Offline Friendly</h3>
-            <p>
-              Enjoy relaxing puzzles wherever you are, even without an internet
-              connection.
-            </p>
+            <p>Most puzzles work without an internet connection, perfect for travel.</p>
           </article>
           <article class="feature reveal">
-            <span class="feature-icon">🔒</span>
-            <h3>Privacy First</h3>
-            <p>
-              Your personal photos remain on your device and are never uploaded to
-              our servers.
-            </p>
-          </article>
-          <article class="feature reveal">
-            <span class="feature-icon">🎨</span>
-            <h3>Beautiful Artwork</h3>
-            <p>
-              Thousands of carefully selected high-quality images make every puzzle
-              enjoyable to complete.
-            </p>
-          </article>
-          <article class="feature reveal">
-            <span class="feature-icon">❤️</span>
-            <h3>Made with Care</h3>
-            <p>
-              PuzzleMe is continuously refined with attention to every detail,
-              delivering a polished and relaxing experience.
-            </p>
+            <span class="feature-icon" aria-hidden="true">🔒</span>
+            <h3>Private by Default</h3>
+            <p>Photos you use for custom puzzles stay on your device and are never uploaded.</p>
           </article>
         </div>
       </div>
@@ -263,120 +191,126 @@
     <section class="section section-muted" id="screenshots">
       <div class="container">
         <div class="section-heading split-layout">
+          <p class="eyebrow reveal">Gallery</p>
+          <h2 class="reveal">See PuzzleMe in action</h2>
           <div class="reveal">
-            <p class="eyebrow">Gallery</p>
-            <h2>See PuzzleMe - Jigsaw Puzzle in action</h2>
-          </div>
-          <div class="reveal">
-            <p>
-              Take a closer look at PuzzleMe - Jigsaw Puzzle and discover its clean interface, beautiful artwork, smooth
-              animations, and thoughtfully designed gameplay. Every screen is crafted to provide a relaxing and
-              enjoyable puzzle experience from the moment you start playing.
-            </p>
+            <p>Take a closer look at the clean interface, beautiful artwork, and gameplay I crafted to keep every
+              session calm and enjoyable.</p>
           </div>
         </div>
         <div class="screenshots-grid">
-          <img class="reveal" src="images/screenshot_1.png" alt="PuzzleMe home screen" loading="lazy">
-          <img class="reveal" src="images/screenshot_2.png" alt="PuzzleMe puzzle gameplay" loading="lazy">
-          <img class="reveal" src="images/screenshot_3.png" alt="PuzzleMe image categories" loading="lazy">
-          <img class="reveal" src="images/screenshot_4.png" alt="PuzzleMe completed puzzle" loading="lazy">
-          <img class="reveal" src="images/screenshot_5.png" alt="PuzzleMe statistics" loading="lazy">
-          <img class="reveal" src="images/screenshot_6.png" alt="PuzzleMe settings" loading="lazy">
+          <img class="reveal" src="images/screenshot_1.webp" alt="PuzzleMe screenshot: Play and relax" width="720" height="1280" loading="lazy">
+          <img class="reveal" src="images/screenshot_2.webp" alt="PuzzleMe screenshot: Classic jigsaw" width="720" height="1280" loading="lazy">
+          <img class="reveal" src="images/screenshot_3.webp" alt="PuzzleMe screenshot: Custom puzzle" width="720" height="1280" loading="lazy">
+          <img class="reveal" src="images/screenshot_4.webp" alt="PuzzleMe screenshot: High quality pictures" width="720" height="1280" loading="lazy">
+          <img class="reveal" src="images/screenshot_5.webp" alt="PuzzleMe screenshot: Daily puzzles" width="720" height="1280" loading="lazy">
+          <img class="reveal" src="images/screenshot_6.webp" alt="PuzzleMe screenshot: Cloud backup" width="720" height="1280" loading="lazy">
         </div>
       </div>
     </section>
-    <section class="section" id="faq">
+    <section class="section" id="reviews">
       <div class="container">
         <div class="section-heading split-layout">
-          <div class="reveal">
-            <p class="eyebrow">Frequently Asked Questions</p>
-            <h2>Everything you need to know.</h2>
+          <p class="eyebrow reveal">Player reviews</p>
+          <h2 class="reveal">Loved by players</h2>
+          <div class="reveal rating-summary">
+            <p class="rating-score"><strong>5.0</strong> <span class="stars" aria-hidden="true">★★★★★</span></p>
+            <p>Rated 5.0 out of 5 from 9 ratings on Google Play, with 100+ downloads
+              so far. Here's what the latest reviews say.</p>
           </div>
+        </div>
+        <div class="reviews-grid">
+          <figure class="review reveal">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote>“Nice simple game, not too many animations, pretty fast.”</blockquote>
+            <figcaption><strong>Octavian R.</strong> · 16 June 2026 · Google Play</figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote>“Perfect for puzzle lovers. Lots of content and new challenges every day.”</blockquote>
+            <figcaption><strong>Eduard B.</strong> · 15 June 2026 · Google Play</figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote>“Nice app, it has good puzzles that you can use to improve your cognitive abilities.”</blockquote>
+            <figcaption><strong>Closer Cards</strong> · 14 June 2026 · Google Play</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="section section-muted" id="faq">
+      <div class="container">
+        <div class="section-heading split-layout">
+          <p class="eyebrow reveal">Frequently Asked Questions</p>
+          <h2 class="reveal">Everything you need to know</h2>
           <div class="reveal">
-            <p>
-              Answers to the most common questions about PuzzleMe.
-            </p>
+            <p>Answers to the most common questions about PuzzleMe.</p>
           </div>
         </div>
         <div class="faq reveal">
           <details>
             <summary>How many difficulty levels are available?</summary>
-            <p>
-              PuzzleMe - Jigsaw Puzzle offers eight difficulty levels ranging from beginner-friendly
-              3×3 puzzles to the challenging 16×16 mode.
-            </p>
+            <p>Eight, from beginner-friendly 3×3 puzzles to the challenging 16×16 mode.</p>
           </details>
           <details>
             <summary>Can I create puzzles from my own photos?</summary>
-            <p>
-              Yes. Simply choose a picture from your gallery and PuzzleMe - Jigsaw Puzzle will
-              transform it into a custom jigsaw puzzle.
-            </p>
+            <p>Yes. Choose a picture from your gallery and PuzzleMe turns it into a custom jigsaw puzzle.</p>
           </details>
           <details>
             <summary>Does PuzzleMe work offline?</summary>
-            <p>
-              Yes. Most puzzles can be enjoyed without an internet connection,
-              making PuzzleMe - Jigsaw Puzzle perfect for travel or relaxing anywhere.
-            </p>
+            <p>Yes. Most puzzles can be played without an internet connection, so it's perfect for travel or relaxing anywhere.</p>
           </details>
           <details>
             <summary>Will my progress be saved?</summary>
-            <p>
-              Absolutely. Your current puzzle is automatically saved so you can
-              continue exactly where you left off.
-            </p>
+            <p>Absolutely. Your current puzzle is saved automatically, so you can continue exactly where you left off. You can also use cloud save with Google Play Games to continue on another device, and view or delete your saves anytime.</p>
           </details>
           <details>
             <summary>Do I need to create an account?</summary>
-            <p>
-              No. PuzzleMe does not require an account to play.
-            </p>
+            <p>No. PuzzleMe does not require an account to play.</p>
           </details>
           <details>
             <summary>Are my personal photos uploaded?</summary>
-            <p>
-              No. Photos used for custom puzzles always remain on your device and
-              are never uploaded to our servers.
-            </p>
+            <p>No. Photos used for custom puzzles always stay on your device and are never uploaded.</p>
           </details>
         </div>
       </div>
     </section>
-    <section class="section section-muted" id="legal">
+    <section class="section" id="legal">
       <div class="container">
         <div class="section-heading split-layout">
+          <p class="eyebrow reveal">Legal</p>
+          <h2 class="reveal">Privacy &amp; Legal Information</h2>
           <div class="reveal">
-            <p class="eyebrow">Legal</p>
-            <h2>Privacy &amp; Legal Information</h2>
-          </div>
-          <div class="reveal">
-            <p>
-              Access the Privacy Policy and Terms &amp; Conditions for PuzzleMe - Jigsaw Puzzle. I believe in clear,
-              transparent policies that explain how your information is collected, used, and protected.
-            </p>
+            <p>Read the Privacy Policy and Terms &amp; Conditions for PuzzleMe. I believe in clear, transparent
+              policies that explain how your information is collected, used, and protected.</p>
           </div>
         </div>
         <div class="button-row reveal">
-          <a class="button" href="terms.html">
-            Terms & Conditions
-            <span aria-hidden="true">→</span>
-          </a>
-          <a class="button" href="privacy.html">
-            Privacy Policy
-            <span aria-hidden="true">→</span>
-          </a>
+          <a class="button" href="terms.html">Terms &amp; Conditions <span aria-hidden="true">→</span></a>
+          <a class="button" href="privacy.html">Privacy Policy <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="delete-data.html">Delete your data <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
   </main>
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div><a class="brand" href="../"><span>CTN Devs</span></a>
+      <div>
+        <a class="brand" href="../"><span>CTN Devs</span></a>
         <p>Relaxing games for brighter breaks.</p>
       </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../">Home</a>
+        <a href="../#games">Games</a>
+        <a href="../#about">About</a>
+        <a href="../#features">Approach</a>
+        <a href="../#privacy">Privacy</a>
+      </nav>
     </div>
-    <div class="container copyright">© <span id="year"></span> CTN Devs. All rights reserved.</div>
+    <div class="container copyright">
+      <p>© <span id="year">2026</span> CTN Devs. All rights reserved.</p>
+      <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
+    </div>
   </footer>
   <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
   <script src="../js/script.js"></script>
