@@ -609,6 +609,18 @@ h3 {
     color: var(--accent)
 }
 
+/* Game pages show a second footer column with the game's legal links. */
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px 56px
+}
+
+.footer-links.footer-links-game {
+    grid-template-columns: auto
+}
+
 .copyright {
     margin-top: 35px;
     padding-top: 20px;
@@ -986,6 +998,11 @@ h3 {
     }
 
     .footer-links {
+        width: 100%
+    }
+
+    .footer-nav {
+        flex-direction: column;
         width: 100%
     }
 

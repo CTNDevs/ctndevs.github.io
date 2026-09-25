@@ -8,13 +8,15 @@
   const theme = document.querySelector('.theme-toggle');
   const backToTop = document.querySelector('.back-to-top');
 
-  // Links use clean directory URLs (puzzleme/, ../#games) to match the canonical URLs.
-  // When the site is opened straight from disk there is no server to resolve index.html, so add it.
+  // Links use clean URLs (puzzleme/, privacy, ../#games) to match the canonical URLs served by the host.
+  // When the site is opened straight from disk there is no server to resolve them, so add the file name.
   if (location.protocol === 'file:') {
     document.querySelectorAll('a[href]').forEach(link => {
       const [path, hash] = link.getAttribute('href').split('#');
-      if (!path || /^[a-z]+:/i.test(path) || !path.endsWith('/')) return;
-      link.setAttribute('href', `${path}index.html${hash !== undefined ? `#${hash}` : ''}`);
+      if (!path || /^[a-z]+:/i.test(path)) return;
+      const lastSegment = path.split('/').pop();
+      const file = path.endsWith('/') ? `${path}index.html` : lastSegment.includes('.') ? path : `${path}.html`;
+      if (file !== path) link.setAttribute('href', `${file}${hash !== undefined ? `#${hash}` : ''}`);
     });
   }
 
