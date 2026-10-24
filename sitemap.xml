@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://ctndevs.com/</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://ctndevs.com/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://ctndevs.com/puzzleme/</loc><lastmod>2026-09-27</lastmod></url>
   <url><loc>https://ctndevs.com/puzzleme/privacy</loc><lastmod>2026-09-27</lastmod></url>
   <url><loc>https://ctndevs.com/puzzleme/terms</loc><lastmod>2026-09-27</lastmod></url>
   <url><loc>https://ctndevs.com/puzzleme/delete-data</loc><lastmod>2026-09-27</lastmod></url>
+  <url><loc>https://ctndevs.com/mazestic/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://ctndevs.com/mazestic/privacy</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://ctndevs.com/mazestic/terms</loc><lastmod>2026-10-24</lastmod></url>
 </urlset>
