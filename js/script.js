@@ -65,6 +65,72 @@
     document.querySelectorAll('main section[id]').forEach(section => active.observe(section));
   }
 
+  // Screenshot carousels: arrows and swipe move one image and loop around; dots show the first visible image.
+  // A copy of the images is added before and after the originals, so going past either end shows the
+  // other end; once scrolling stops, the track jumps silently back to the same image in the originals.
+  document.querySelectorAll('[data-carousel]').forEach(carousel => {
+    const track = carousel.querySelector('.carousel-track');
+    const originals = [...track.children];
+    const count = originals.length;
+    if (count < 2) return;
+    const copies = () => originals.map(slide => {
+      const copy = slide.cloneNode(true);
+      copy.alt = '';
+      copy.setAttribute('aria-hidden', 'true');
+      return copy;
+    });
+    track.prepend(...copies());
+    track.append(...copies());
+
+    const slides = [...track.children];
+    const prev = carousel.querySelector('.carousel-prev');
+    const next = carousel.querySelector('.carousel-next');
+    const dots = carousel.querySelector('.carousel-dots');
+    const step = () => slides[1].offsetLeft - slides[0].offsetLeft;
+    const position = () => Math.round(track.scrollLeft / step());
+    const goTo = index => track.scrollTo({ left: index * step() });
+    const jumpTo = index => {
+      track.style.scrollBehavior = 'auto';
+      track.scrollLeft = index * step();
+      track.style.scrollBehavior = '';
+    };
+
+    let last = count;
+    let touching = false;
+    let settle;
+    const recenter = () => {
+      if (touching) return;
+      const index = position();
+      if (index < count) jumpTo(index + count);
+      else if (index >= 2 * count) jumpTo(index - count);
+    };
+
+    const update = () => {
+      last = position();
+      const active = last % count;
+      [...dots.children].forEach((dot, i) => dot.setAttribute('aria-current', String(i === active)));
+      clearTimeout(settle);
+      settle = setTimeout(recenter, 150);
+    };
+
+    dots.replaceChildren(...originals.map((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Show screenshot ${i + 1}`);
+      dot.addEventListener('click', () => goTo(position() - (position() % count) + i));
+      return dot;
+    }));
+
+    prev.addEventListener('click', () => goTo(position() - 1));
+    next.addEventListener('click', () => goTo(position() + 1));
+    track.addEventListener('scroll', update, { passive: true });
+    track.addEventListener('touchstart', () => { touching = true; }, { passive: true });
+    track.addEventListener('touchend', () => { touching = false; update(); }, { passive: true });
+    addEventListener('resize', () => jumpTo(last));
+    jumpTo(count);
+    update();
+  });
+
   // Email addresses are assembled on click to keep them away from scrapers.
   // Markup: <button data-email-user="contact" data-email-domain="ctndevs.com">Show email</button>
   document.querySelectorAll('[data-email-user]').forEach(button => button.addEventListener('click', () => {

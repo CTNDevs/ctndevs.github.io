@@ -683,22 +683,104 @@ h3 {
 /* ============================
    12. Game page components (e.g. puzzleme)
    ============================ */
-.screenshots-grid {
+/* Screenshot carousel: shows --per-view images, arrows move one image at a time.
+   Without JS it is still a swipeable/scrollable row; arrows and dots are added by script.js. */
+.carousel {
+    --per-view: 3;
+    --gap: 28px;
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 12px 16px
 }
 
-.screenshots-grid img {
-    width: 100%;
+.carousel-track {
+    grid-column: 2;
+    display: flex;
+    gap: var(--gap);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-inline: 4px;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    padding: 12px 4px 24px
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none
+}
+
+.carousel-track img {
+    flex: 0 0 calc((100% - (var(--per-view) - 1) * var(--gap)) / var(--per-view));
+    min-width: 0;
+    height: auto;
+    scroll-snap-align: start;
     border-radius: 24px;
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
     transition: .25s
 }
 
-.screenshots-grid img:hover {
-    transform: translateY(-8px) scale(1.02)
+.carousel-track img:hover {
+    transform: translateY(-8px)
+}
+
+.carousel-btn,
+.carousel-dots {
+    display: none
+}
+
+.js .carousel-btn {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    padding: 0 0 4px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: var(--shadow);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: .2s
+}
+
+.js .carousel-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent)
+}
+
+.js .carousel-dots {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: 10px
+}
+
+.js .carousel-dots[hidden] {
+    display: none
+}
+
+.carousel-dots button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: var(--muted);
+    opacity: .4;
+    cursor: pointer;
+    transition: .25s
+}
+
+.carousel-dots button[aria-current="true"] {
+    width: 28px;
+    background: var(--accent);
+    opacity: 1
 }
 
 .stars {
@@ -963,10 +1045,16 @@ h3 {
         grid-row: auto
     }
 
+    /* Phones: keep the logo/app icons from filling the whole screen width. */
     .hero-art {
-        max-width: 520px;
-        margin: 0 auto 35px;
+        width: min(280px, 72vw);
+        margin: 0 auto 28px;
         order: -1
+    }
+
+    .game-card > img {
+        width: min(280px, 72vw);
+        margin: 24px auto 0
     }
 
     .hero-copy .lead {
@@ -1006,10 +1094,29 @@ h3 {
         width: 100%
     }
 
-    .screenshots-grid {
-        grid-template-columns: 1fr;
+    /* Phones: one screenshot at a time; arrows sit under the image, around the dots: ‹ • • • › */
+    .carousel {
+        --per-view: 1;
+        --gap: 16px;
         max-width: 340px;
         margin: auto
+    }
+
+    .carousel-track {
+        grid-column: 1 / -1;
+        grid-row: 1
+    }
+
+    .js .carousel-btn {
+        grid-row: 2;
+        width: 40px;
+        height: 40px;
+        font-size: 1.7rem
+    }
+
+    .js .carousel-dots {
+        grid-column: 2;
+        grid-row: 2
     }
 
     .faq summary {
@@ -1027,9 +1134,12 @@ h3 {
 
 @media (min-width: 761px) and (max-width: 980px) {
     .games-grid,
-    .features-grid,
-    .screenshots-grid {
+    .features-grid {
         grid-template-columns: repeat(2, 1fr)
+    }
+
+    .carousel {
+        --per-view: 2
     }
 
     .reviews-grid {
@@ -1038,7 +1148,8 @@ h3 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html {
+    html,
+    .carousel-track {
         scroll-behavior: auto
     }
 
