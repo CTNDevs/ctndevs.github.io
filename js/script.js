@@ -131,16 +131,6 @@
     update();
   });
 
-  // Email addresses are assembled on click to keep them away from scrapers.
-  // Markup: <button data-email-user="contact" data-email-domain="ctndevs.com">Show email</button>
-  document.querySelectorAll('[data-email-user]').forEach(button => button.addEventListener('click', () => {
-    const email = `${button.dataset.emailUser}@${button.dataset.emailDomain}`;
-    const link = document.createElement('a');
-    link.href = `mailto:${email}`;
-    link.textContent = email;
-    button.replaceWith(link);
-  }));
-
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 })();
