@@ -65,7 +65,7 @@
           <p class="eyebrow">Legal</p>
           <h1 class="page-title">Privacy Policy</h1>
           <p class="lead">MAZEstic: Maze Worlds, developed and published by CTN Devs</p>
-          <p class="legal-meta">Last updated: 10 November 2026</p>
+          <p class="legal-meta">Last updated: 14 November 2026</p>
         </div>
         <div class="legal-content">
           <h2>1. Introduction</h2>
@@ -81,6 +81,8 @@
             <li>Your progress and settings are stored on your device.</li>
             <li>When you finish a level, your time is sent to the global best-times table with a random player id. No
               name or email address is sent.</li>
+            <li>In online races you are connected directly with the other players in the race, who can see your IP
+              address. You appear under a name the Game makes up, and nothing about a race is kept after it ends.</li>
             <li>The Game shows ads from Google AdMob and asks for your consent where the law requires it.</li>
             <li>The Game uses GameAnalytics for usage statistics and Sentry for crash and bug reports.</li>
             <li>The optional "Remove Ads" purchase is handled by Google Play. I never see your payment details.</li>
@@ -97,7 +99,7 @@
             <li>whether you own "Remove Ads"</li>
             <li>your random player id (see section 4) and a copy of the global best times</li>
           </ul>
-          <p>This data stays on your device until you delete it (section 14), clear the Game's data, or uninstall the
+          <p>This data stays on your device until you delete it (section 16), clear the Game's data, or uninstall the
             Game.</p>
 
           <h2>4. Global Best Times</h2>
@@ -109,14 +111,32 @@
             can be sent; your IP address is not stored. The server runs on Cloudflare and the data is stored in the
             European Union.</p>
 
-          <h2>5. Google Play Games and Cloud Save</h2>
+          <h2>5. Online Races</h2>
+          <p>In an online race, up to five players race through the same maze at the same time. You need no account,
+            and you cannot type a name or a message: each player appears under a name the Game makes up from two
+            words, such as "Swift Comet", and can only ask for another one.</p>
+          <p>To list races and bring players together, the Game connects to my race server while you are on the race
+            screens. It sends the generated name, the ball you use, the maze of the race, your ready state and your
+            result (time and stars). This information is shown to the other players in the same race. The race server
+            runs on Cloudflare and keeps it only in memory while the race room is open; nothing is written to a
+            database, and it is gone when the room closes.</p>
+          <p>During a race, the position of your ball is sent straight to the other players' devices, about thirty
+            times a second, so they can see it as a ghost. Because the devices connect to each other directly, the
+            other players in the race receive your IP address, as is normal for this kind of connection. When a direct
+            connection is not possible, the traffic goes through a Cloudflare relay (TURN), which passes it on
+            without keeping it. The connections are encrypted.</p>
+          <p>Races do not change your progress, stars or best times. To prevent abuse, the race server briefly limits
+            how often each IP address can connect; the IP address is not stored. You leave a race, and the race server,
+            by leaving the race screens.</p>
+
+          <h2>6. Google Play Games and Cloud Save</h2>
           <p>On Android, the Game uses Google Play Games to save a copy of your progress in your Google account, so you
             can get it back after a reinstall or on another device. The Game uses only this save; it does not read your
             name, email address, or friends list.</p>
           <p>You can stop the Game from using Play Games in Settings &gt; Cloud Save &gt; Sign Out. Google's handling
             of this data is described in its privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
 
-          <h2>6. Advertising (Google AdMob)</h2>
+          <h2>7. Advertising (Google AdMob)</h2>
           <p>The Game is free and is funded by ads from Google AdMob: a banner during levels, and ads you can choose to
             watch, for example to open every tenth level, double your stars, or try a style for a while.</p>
           <p>Google and its partners may use your advertising ID, IP address, and information about your device and
@@ -125,19 +145,19 @@
             Settings &gt; Legal &gt; Privacy Options, and you can reset your advertising ID in your device settings.
             How Google uses this data: <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/partner-sites</a></p>
 
-          <h2>7. Purchases (Google Play)</h2>
+          <h2>8. Purchases (Google Play)</h2>
           <p>"Remove Ads" is an optional one-time purchase made through Google Play. Google handles the payment, and I
             never receive your payment details. Google gives me the order records I need for refunds and
             accounting.</p>
 
-          <h2>8. Analytics (GameAnalytics)</h2>
+          <h2>9. Analytics (GameAnalytics)</h2>
           <p>The Game uses GameAnalytics to understand how it is played, for example which levels are too hard and which
             features are used. GameAnalytics receives an identifier it creates for your installation, your device model,
             operating system, country, the Game's version, and gameplay events such as levels started and finished. I
             only look at totals across all players. GameAnalytics is operated by GameAnalytics A/S, Denmark:
             <a href="https://www.gameanalytics.com/trust/privacy-notice" target="_blank" rel="noopener noreferrer">https://www.gameanalytics.com/trust/privacy-notice</a></p>
 
-          <h2>9. Crash and Bug Reports (Sentry)</h2>
+          <h2>10. Crash and Bug Reports (Sentry)</h2>
           <p>If the Game crashes, a report is sent to Sentry so I can fix the problem. It contains technical details
             about the error, the Game's version, and your device model and operating system. It does not contain
             screenshots or anything you typed.</p>
@@ -146,14 +166,23 @@
             Game cannot see your other photos. I use your email address only to reply to your report.</p>
           <p>Reports are stored in Sentry's European region, in Germany: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">https://sentry.io/privacy/</a></p>
 
-          <h2>10. Motion Sensor</h2>
+          <h2>11. Motion Sensor</h2>
           <p>The Game reads your device's motion sensor to move the ball when you tilt it. This happens only on your
             device and nothing is sent anywhere.</p>
 
-          <h2>11. Legal Bases for Processing</h2>
+          <h2>12. Sharing and Ratings</h2>
+          <p>After a level, you can share a picture of the results screen to Facebook or Instagram. The Game saves the
+            picture in its own storage on your device and hands it, with a short text, to the app you choose; the text
+            is also copied to your clipboard. Nothing is sent to me, and what happens next is up to you and that
+            app.</p>
+          <p>The Game may ask you once to rate it, using Google Play's own rating window. Your rating and review go to
+            Google Play; the Game is not told whether or how you rated it. Settings &gt; About &gt; Rate the Game opens
+            the Game's page in the Play Store.</p>
+
+          <h2>13. Legal Bases for Processing</h2>
           <ul>
-            <li><strong>Contract</strong>: to provide what you use or buy, such as the best times, cloud save,
-              purchases, and deleting your data.</li>
+            <li><strong>Contract</strong>: to provide what you use or buy, such as the best times, online races,
+              cloud save, purchases, and deleting your data.</li>
             <li><strong>Consent</strong>: for personalized ads where the law requires it, and for bug reports you choose
               to send.</li>
             <li><strong>Legitimate interest</strong>: to improve the Game, fix crashes, prevent abuse, and show
@@ -161,51 +190,52 @@
             <li><strong>Legal obligation</strong>: to keep accounting records of purchases.</li>
           </ul>
 
-          <h2>12. Service Providers and International Transfers</h2>
+          <h2>14. Service Providers and International Transfers</h2>
           <p>The Game relies on Cloudflare, Google, GameAnalytics, and Sentry. Some of them may process data outside
             the European Economic Area, including in the United States, under the safeguards required by EU law. I do
             not sell your personal data and do not share it except with these services or where the law requires
             it.</p>
 
-          <h2>13. Data Retention</h2>
+          <h2>15. Data Retention</h2>
           <ul>
             <li>Data on your device: until you delete it, clear the Game's data, or uninstall the Game.</li>
             <li>Cloud save: in your Google account until you delete it.</li>
             <li>Global best times: while the record stands, or until you delete them.</li>
+            <li>Online races: only in the race server's memory while the race room is open.</li>
             <li>Crash and bug reports: up to 90 days.</li>
             <li>Advertising and analytics data: according to Google's and GameAnalytics' own policies.</li>
             <li>Purchase records: as long as accounting law requires.</li>
             <li>Emails you send me: until the matter is resolved, and no longer than 12 months.</li>
           </ul>
 
-          <h2>14. Deleting Your Data</h2>
+          <h2>16. Deleting Your Data</h2>
           <p>In the Game, open <strong>Settings &gt; Your Data &gt; Delete Save Game</strong>. After you confirm, it
             deletes your progress on the device, your best times on the server, and your cloud save if you are signed in
             to Play Games. Your "Remove Ads" purchase is not affected.</p>
           <p>If you no longer have the Game, or for any other data, follow the steps on the
             <a href="delete-data">Delete Your Data</a> page or email <span class="email">mazestic@ctndevs.com</span>.</p>
 
-          <h2>15. Your Rights</h2>
+          <h2>17. Your Rights</h2>
           <p>Under the General Data Protection Regulation (GDPR), you have the right to access, correct, and delete
             your data, to restrict or object to its use, to receive it in a portable format, and to withdraw your consent
             at any time. To use these rights, email me at <span class="email">mazestic@ctndevs.com</span>. I will reply within one month.</p>
           <p>You can also complain to a data protection authority. In Romania, this is ANSPDCP,
             <a href="https://www.dataprotection.ro" target="_blank" rel="noopener noreferrer">www.dataprotection.ro</a>.</p>
 
-          <h2>16. Children</h2>
+          <h2>18. Children</h2>
           <p>The Game is suitable for everyone (rated PEGI 3), but it is not directed at children under 13, and I do
             not knowingly collect their personal data. If you believe a child has sent me personal data, contact me and
             I will delete it.</p>
 
-          <h2>17. Data Security</h2>
+          <h2>19. Data Security</h2>
           <p>Data sent by the Game is encrypted in transit, and I take reasonable measures to protect it. No method
             of transmission or storage is completely secure, however.</p>
 
-          <h2>18. Changes to This Policy</h2>
+          <h2>20. Changes to This Policy</h2>
           <p>I may update this Privacy Policy from time to time. The date at the top shows when it was last changed.
             For significant changes, I will give notice on this page or in the Game.</p>
 
-          <h2>19. Contact</h2>
+          <h2>21. Contact</h2>
           <p>Email: <span class="email">mazestic@ctndevs.com</span></p>
         </div>
         <div class="button-row">
