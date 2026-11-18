@@ -121,7 +121,7 @@
           <p class="eyebrow">Legal</p>
           <h1 class="page-title">Privacy Policy</h1>
           <p class="lead">MAZEstic: Maze Worlds, developed and published by CTN Devs</p>
-          <p class="legal-meta">Last updated: 15 November 2026</p>
+          <p class="legal-meta">Last updated: 18 November 2026</p>
         </div>
         <div class="legal-content">
           <h2>1. Introduction</h2>
@@ -137,6 +137,8 @@
             <li>Your progress and settings are stored on your device.</li>
             <li>When you finish a level, your time is sent to the global best-times table with a random player id. No
               name or email address is sent.</li>
+            <li>Your time on the daily maze is sent to that day's leaderboard with the same player id and a made-up
+              name, and deleted after 14 days.</li>
             <li>In online races you play under a made-up name. The other players in your race can see your IP
               address, and nothing about a race is kept after it ends.</li>
             <li>The Game shows ads from Google AdMob and asks for your consent where the law requires it.</li>
@@ -156,11 +158,13 @@
             <li>your random player id (see section 4) and a copy of the global best times</li>
             <li>your online race record: the generated name, race stars, rating, and how often you reached each
               place</li>
+            <li>your daily maze record: your best time on each of the last 30 days, your streak, and your reminder
+              choice</li>
           </ul>
           <p>This data stays on your device until you delete it (section 16), clear the Game's data, or uninstall the
             Game.</p>
 
-          <h2>4. Global Best Times</h2>
+          <h2>4. Global Best Times and the Daily Maze</h2>
           <p>Each level has one fastest time, shared by everyone who plays. When you finish a level, the Game sends
             your time, the level, and a random player id to my server. The player id is created by the Game; it is not
             linked to your device, your account, or your name. It lets the Game show a crown on the records that are
@@ -168,6 +172,11 @@
           <p>Only the fastest time for each level is kept. To prevent abuse, the server briefly limits how often times
             can be sent; your IP address is not stored. The server runs on Cloudflare and the data is stored in the
             European Union.</p>
+          <p><strong>The daily maze</strong> has a leaderboard of its own for each day. When you finish it, the Game
+            sends your time, the day, the same random player id, and the made-up name the Game gave you (the one used
+            in online races, such as "Swift Comet"). Other players see your made-up name and your time in that day's
+            top ten, and you see your own place. Only your best time of the day is kept, and each day's times are
+            deleted from the server after 14 days.</p>
 
           <h2>5. Online Races</h2>
           <p>Online races let up to five players race on the same maze. You do not need an account, and you cannot type a name or send messages: the Game gives you a made-up name, such as "Swift Comet".</p>
@@ -213,9 +222,12 @@
             Game cannot see your other photos. I use your email address only to reply to your report.</p>
           <p>Reports are stored in Sentry's European region, in Germany: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">https://sentry.io/privacy/</a></p>
 
-          <h2>11. Motion Sensor</h2>
+          <h2>11. Motion Sensor and Reminders</h2>
           <p>The Game reads your device's motion sensor to move the ball when you tilt it. This happens only on your
             device and nothing is sent anywhere.</p>
+          <p>On Android you can turn on a daily reminder that a new daily maze is ready (Settings &gt; Notifications).
+            It is off until you agree to it. The reminder is scheduled by your device for itself: no notification
+            service or server is involved, and nothing is sent anywhere.</p>
 
           <h2>12. Sharing and Ratings</h2>
           <p>You can share a picture of your results on Facebook or Instagram. The picture and its text go only to the app you choose; I do not receive anything.</p>
@@ -243,6 +255,7 @@
             <li>Data on your device: until you delete it, clear the Game's data, or uninstall the Game.</li>
             <li>Cloud save: in your Google account until you delete it.</li>
             <li>Global best times: while the record stands, or until you delete them.</li>
+            <li>Daily maze times: 14 days, or until you delete them.</li>
             <li>Online races: only while the race is open; nothing is kept afterwards.</li>
             <li>Crash and bug reports: up to 90 days.</li>
             <li>Advertising and analytics data: according to Google's and GameAnalytics' own policies.</li>
@@ -252,7 +265,8 @@
 
           <h2>16. Deleting Your Data</h2>
           <p>In the Game, open <strong>Settings &gt; Your Data &gt; Delete Save Game</strong>. After you confirm, it
-            deletes your progress on the device, including your online race record, your best times on the server,
+            deletes your progress on the device, including your online race record, your best times and daily maze
+            times on the server,
             and your cloud save if you are signed in to Play Games. Your "Remove Ads" purchase is not affected.</p>
           <p>If you no longer have the Game, or for any other data, follow the steps on the
             <a href="delete-data">Delete Your Data</a> page or email <span class="email">mazestic@ctndevs.com</span>.</p>
