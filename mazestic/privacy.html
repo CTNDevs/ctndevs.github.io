@@ -83,7 +83,7 @@
   </script>
 </head>
 
-<body>
+<body><!--email_off-->
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="Main navigation">
@@ -118,7 +118,7 @@
           <p class="eyebrow">Legal</p>
           <h1 class="page-title">Privacy Policy</h1>
           <p class="lead">MAZEstic: Maze Worlds, developed and published by CTN Devs</p>
-          <p class="legal-meta">Last updated: 24 November 2026</p>
+          <p class="legal-meta">Last updated: 25 November 2026</p>
         </div>
         <div class="legal-content">
           <h2>1. Introduction</h2>
@@ -164,8 +164,7 @@
           <h2>4. Global Best Times and the Daily Maze</h2>
           <p>Each level has one fastest time, shared by everyone who plays. When you finish a level, the Game sends
             your time, the level, and a random player id to my server. The player id is created by the Game; it is not
-            linked to your device, your account, or your name. It lets the Game show a crown on the records that are
-            yours, and lets you delete your times. You can see it in Settings &gt; Your Data.</p>
+            linked to your device, your account, or your name. It lets the Game show a crown on the records that are yours, and lets you delete your times. Because the id is all that links the times to you, I cannot tell which times are yours without it, and I do not collect anything more to find out (Article 11 of the GDPR). You can see it in Settings &gt; Your Data.</p>
           <p>Only the fastest time for each level is kept. To prevent abuse, the server briefly limits how often times
             can be sent; your IP address is not stored. The server runs on Cloudflare and the data is stored in the
             European Union.</p>
@@ -178,7 +177,7 @@
           <h2>5. Online Races</h2>
           <p>Online races let up to five players race on the same maze. You do not need an account, and you cannot type a name or send messages: the Game gives you a made-up name, such as "Swift Comet".</p>
           <p><strong>What the other players see:</strong> your made-up name, the ball you use, whether you are ready, your ball moving through the maze during the race, and your result.</p>
-          <p><strong>Your IP address:</strong> so the race runs smoothly, your phone connects directly to the phones of the other players in your race, and they can see your IP address, as in most online games. When a direct connection is not possible, the race goes through Cloudflare, my server provider.</p>
+          <p><strong>Your IP address:</strong> so the race runs smoothly, your phone connects directly to the phones of the other players in your race, and they can see your IP address, as in most online games. When a direct connection is not possible, the race goes through Cloudflare, my server provider. Once your phone is connected to theirs, I cannot control what the other players do with your IP address; if you do not want them to see it, do not join online races. The Game tells you this before your first online race.</p>
           <p><strong>What is kept:</strong> nothing. My server only knows about a race while it is open, and forgets it when it ends. Your race stars and race statistics stay on your device.</p>
 
           <h2>6. Google Play Games and Cloud Save</h2>
@@ -210,7 +209,7 @@
             only look at totals across all players. GameAnalytics is operated by GameAnalytics A/S, Denmark:
             <a href="https://www.gameanalytics.com/trust/privacy-notice" target="_blank" rel="noopener noreferrer">https://www.gameanalytics.com/trust/privacy-notice</a></p>
 
-          <p>In the European Economic Area, the United Kingdom, and Switzerland, GameAnalytics is used only if you agree to it in the consent message the Game shows when it starts, the same one used for ads. If you do not agree, the Game sends nothing to GameAnalytics. You can change your choice at any time in Settings &gt; Legal &gt; Privacy Options. Elsewhere, it is used to improve the Game, and you can object to it by emailing me.</p>
+          <p>In the European Economic Area, the United Kingdom, and Switzerland, GameAnalytics is used only if you agree to it in the consent message the Game shows when it starts, the same one used for ads. If you do not agree, the Game sends nothing to GameAnalytics. You can change your choice at any time in Settings &gt; Legal &gt; Privacy Options. In that message, the statistics are covered by the purposes I use myself: "Store and/or access information on a device", "Measure content performance", "Understand audiences through statistics or combinations of data from different sources", and "Develop and improve services". Elsewhere, it is used to improve the Game, and you can object to it by emailing me.</p>
 
           <h2>10. Crash and Bug Reports (Sentry)</h2>
           <p>If the Game crashes or stops responding, a report is sent to Sentry so I can fix the problem. It contains technical details about the error: the Game's own recent log messages, which of its screens were open, the Game's version, and your device model and operating system. It does not contain
@@ -243,10 +242,7 @@
           </ul>
 
           <h2>14. Service Providers and International Transfers</h2>
-          <p>The Game relies on Cloudflare, Google, GameAnalytics, and Sentry. Some of them may process data outside
-            the European Economic Area, including in the United States, under the safeguards required by EU law. I do
-            not sell your personal data and do not share it except with these services or where the law requires
-            it.</p>
+          <p>The Game relies on Cloudflare, Google, GameAnalytics, and Sentry. Some of them may process data outside the European Economic Area, including in the United States. Such transfers are protected by the EU-U.S. Data Privacy Framework, where the provider is certified under it, or by the European Commission's Standard Contractual Clauses. GameAnalytics and Sentry process data on my behalf, under their data processing terms. I do not sell your personal data and do not share it except with these services or where the law requires it.</p>
 
           <h2>15. Data Retention</h2>
           <ul>
@@ -256,7 +252,8 @@
             <li>Daily maze times: 14 days, or until you delete them.</li>
             <li>Online races: only while the race is open; nothing is kept afterwards.</li>
             <li>Crash and bug reports: up to 90 days.</li>
-            <li>Advertising and analytics data: according to Google's and GameAnalytics' own policies.</li>
+            <li>Advertising data: kept by Google for the periods described in <a href="https://policies.google.com/technologies/retention" target="_blank" rel="noopener noreferrer">how Google retains data</a>.</li>
+            <li>Usage statistics: kept by GameAnalytics only while I use its service for the Game, as pseudonymous data linked to its own installation identifier; I only ever look at totals.</li>
             <li>Purchase records: as long as accounting law requires.</li>
             <li>Emails you send me: until the matter is resolved, and no longer than 12 months.</li>
           </ul>
@@ -275,11 +272,10 @@
             at any time. To use these rights, email me at <span class="email">mazestic@ctndevs.com</span>. I will reply within one month.</p>
           <p>You can also complain to a data protection authority. In Romania, this is ANSPDCP,
             <a href="https://www.dataprotection.ro" target="_blank" rel="noopener noreferrer">www.dataprotection.ro</a>.</p>
+          <p><strong>United States residents.</strong> I do not sell your personal information. Under some US state laws, such as California's (CCPA/CPRA), showing personalized ads through Google AdMob, which uses your device's advertising ID and information about the ads you see, can count as "sharing" personal information for cross-context behavioral advertising. To opt out, delete or reset your advertising ID, or turn off ad personalization, in your device settings. You can also email me at <span class="email">mazestic@ctndevs.com</span> to ask what information I hold about you, or to have it deleted. I will not treat you differently for using these rights.</p>
 
           <h2>18. Children</h2>
-          <p>The Game is suitable for everyone (rated PEGI 3), but it is not directed at children under 13, and I do
-            not knowingly collect their personal data. If you believe a child has sent me personal data, contact me and
-            I will delete it.</p>
+          <p>The Game is rated PEGI 3, so its content suits everyone, but it is not directed at children. I do not knowingly collect personal data from children under 13, or under the age at which a child can consent to online services on their own where they live (16 in Romania and several other countries in the European Economic Area). Younger players should ask a parent or guardian before agreeing to personalized ads or usage statistics. If you believe a child has sent me personal data, contact me and I will delete it.</p>
 
           <h2>19. Data Security</h2>
           <p>Data sent by the Game is encrypted in transit, and I take reasonable measures to protect it. No method
@@ -328,6 +324,6 @@
   </footer>
   <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
   <script src="../js/script.js"></script>
-</body>
+<!--/email_off--></body>
 
 </html>
